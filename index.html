@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Contact form: first name, last name, email address, query type, message">
+    <meta name="keywords" content="contact, form, email, support request, full name">
+    <meta name="author" content="L-ux-es">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+<main>
+    <div id="contact-form-container">
+        <h1 id="title-contact-form">Contact Us</h1>
+        <form id="contact-form">
+            <fieldset id="full-name">
+                <div>
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first-name"
+                           autocomplete="name"
+                           aria-describedby="first-name-required" required>
+                    <span id="first-name-required" class="required-message">This field is required</span>
+                </div>
+                <div>
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last-name"
+                           autocomplete="name"
+                           aria-describedby="last-name-required" required>
+                    <span id="last-name-required" class="required-message">The field is required</span></div>
+            </fieldset>
+            <fieldset id="email-container">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email"
+                       autocomplete="email"
+                       aria-invalid="true"
+                       aria-describedby="email-required" required>
+                <span id="email-instructions" class="error-message">Please enter a valid email address</span>
+                <span id="email-required" class="required-message">This field is required</span>
+            </fieldset>
+            <fieldset id="query-type">
+                <legend>Query Type *</legend>
+                <div class="radioButton-container">
+                    <input type="radio" id="general-enquiry-radio" name="query" value="General Enquiry"
+                           aria-describedby="query-required" required>
+                    <img src="assets/images/icon-radio-selected.svg" alt="Selected">
+                    <label for="general-enquiry-radio">General Enquiry</label></div>
+                <div class="radioButton-container">
+                    <input type="radio" id="support-request-radio" name="query" value="Support Request" >
+                    <img src="assets/images/icon-radio-selected.svg" alt="Selected">
+                    <label for="support-request-radio">Support Request</label></div>
+                <span id="query-required" class="required-message">Please select a query type</span>
+            </fieldset>
+            <fieldset>
+                <label for="message-textarea">Message *</label>
+                <textarea id="message-textarea" aria-describedby="message-required" required></textarea>
+                <span id="message-required" class="required-message">This field is required</span>
+            </fieldset>
+            <fieldset id="consent-field">
+                <label for="consent">
+                    <input type="checkbox" id="consent" name="consent" aria-describedby="consent-required" required>
+                    <img id="consentImg" src="assets/images/icon-checkbox-check.svg" alt="Selected">
+                    <p>I consent to being contacted by the team *</p>
+                    <span id="consent-required" class="required-message">To submit this form, please consent to being contacted</span></label>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="message-successful">
+            <div>
+                <img src="assets/images/icon-success-check.svg" alt="Success">
+                <h3>Message Sent!</h3></div>
+            <p>Thanks for completing the form. We'll be in touch soon!</p></div>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="#">Leo Sánchez</a>.
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
