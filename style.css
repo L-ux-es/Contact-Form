@@ -227,6 +227,7 @@ input[type="radio"]:hover, input[type="checkbox"]:hover, button[type="submit"]:h
 @media (width > 700px) {
     #contact-form-container {
         width: 50%;
+        height:70%;
     }
 
     #query-type, #full-name {
